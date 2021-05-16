@@ -8,12 +8,22 @@ const server = restify.createServer({
 
 var knex = require('knex')({
     client: 'mysql',
+    /*
     connection: {
       host : '127.0.0.1',
       user : 'root',
       password : '',
       database : 'rest_bd'
     }
+*/
+
+    connection: {
+        host : 'us-cdbr-east-03.cleardb.com',
+        user : 'bd86cfe372ddb3',
+        port: 3306,
+        password : '5db3f4e1',
+        database : 'heroku_1d491feb2724f13'
+      }
   });
 
 server.use(restify.plugins.acceptParser(server.acceptable));
