@@ -24,8 +24,9 @@ server.listen((process.env.PORT || 5000), function () {
   console.log('%s listening at %s', server.name, server.url);
 });
 
+console.log('ola');
 // rotas REST
-
+//teste
 server.get('/', (req, res, next) => {
     
     knex('rest').then((dados) => {
