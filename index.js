@@ -27,8 +27,7 @@ var knex = require('knex')({
       }
   });
 
-  app.use(cors())
-
+server.use(cors())
 server.use(restify.plugins.acceptParser(server.acceptable));
 server.use(restify.plugins.queryParser());
 server.use(restify.plugins.bodyParser());
