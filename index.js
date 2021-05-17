@@ -1,5 +1,6 @@
 const restify = require('restify');
 const errs = require('restify-errors');
+var cors = require('cors')
 
 const server = restify.createServer({
   name: 'myapp',
@@ -25,6 +26,8 @@ var knex = require('knex')({
         database : 'heroku_1d491feb2724f13'
       }
   });
+
+  app.use(cors())
 
 server.use(restify.plugins.acceptParser(server.acceptable));
 server.use(restify.plugins.queryParser());
